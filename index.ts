@@ -10,12 +10,17 @@ import errorMiddleware from "./middleware/error.middleware";
 const app = express()
 const port = process.env.PORT || 8000
 
+app.use(cors({
+  credentials: true,
+  origin: process.env.CLIENT_URL
+}));
+
 app.use(express.static('public'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
-  origin: process.env.CLIENT_URL
+  origin: '*',
 }));
 
 app.use('/api', router);

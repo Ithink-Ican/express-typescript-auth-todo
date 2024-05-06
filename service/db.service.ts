@@ -4,7 +4,7 @@ import {IDb} from "../type/db";
 import {categories, categoryItems, categoryProductList, products} from "../data";
 import {EOL} from "os";
 
-const dbPath = './db.json'
+const dbPath = '../db.json'
 const loggerPath = './logger/log.txt'
 const initialDb: IDb = {
   users: [],

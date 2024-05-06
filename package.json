@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "nodemonConfig": {
+    "ignore": ["*"]
+  },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon index.ts",
-    "start": "nodemon index.ts",
+    "dev": "cross-env NODE_ENV=development nodemon --ignore ./ index.ts",
+    "start": "nodemon --ignore ./ index.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "author": "",
